@@ -23,6 +23,9 @@ exclude = [
 ]
 build = "build.rs"
 
+[target.'cfg(not(target_env = "sgx"))'.dependencies]
+sgx_tstd = { path =  "../../sgx_tstd" }
+
 [badges]
 travis-ci = { repository = "bitflags/bitflags" }
 
